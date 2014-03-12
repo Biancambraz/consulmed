@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Consultório Médico</title>
+  <link rel="stylesheet" type="text/css" media="all" href="style.css">
+  <link rel="stylesheet" type="text/css" media="all" href="fancybox/jquery.fancybox.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.0.6"></script>
+  <script type="text/javascript" src="index.js"></script>  
+</head>
+
+<body>
+
+<div id="container">
+	<div id="topo">
+    
+    <div id="titulo">
+        <img src="enfermeira.jpg" > 
+        <h1 style="text-align:center">ConsulMed - Consultório Médico</h1>
+        <img src="medico.gif" style="float:right;"> 
+    </div>
+
+    </div>
+    <div id="menu">
+    	<ul>
+  	  		<li><a class="aqui" href="Index.html"><strong>Home</strong></a></li>
+            <li><a class="modalbox" href="#about"><strong>About</strong></a></li>
+            
+        </ul>    
+    </div>
+
+<div id="wrapper">
+	<form id="form1" name="form1" method="post">
+              		
+	<h2><strong>ConsulMed - Agenda</strong></h2></legend>
+		    <p>&nbsp;</p>
+			
+			<div style="width:250px;">
+				<div> <label for="select" class="label_form" >Médico:</label> <select name="Medico" id="Medico" style="width : 153px;"></select> </div>
+				<div> <label for="date2"  class="label_form" >Data:</label> <input type="date" name="Data2" id="Data2" /> </div>
+			</div>  
+	
+		    <p>&nbsp;</p>
+          	<p>
+        	<input type="button" name="btnConsultar" id="btnConsultar" class="botao" value="Consultar">
+	  </p>
+      		<p>&nbsp;</p>
+			
+              <table id="tabelaConsultas" >
+				<thead>
+					<tr>
+						<td colspan="4" class="cabecalho_superior"> <label id="nomeMedico"> Medico </label> - <label id="data"> data </label> </td>
+						<td> <a href="#" id="lnkDiaAnterior" ><img src="previewButton.png"> </a>
+                        	 <a href="#" id="lnkProximoDia" ><img src="nextButton.png"></a> </td>
+					</tr>
+					<tr>
+						<td><strong>Horário</strong></td>
+						<td><strong>Status</strong></td>
+						<td><strong>Paciente</strong></td>
+						<td><strong>Plano de Saúde</strong></td>
+						<td><strong>Opções</strong></td>
+					</tr>
+				</thead>
+				<tfoot>
+				</tfoot>
+				<tbody>
+				</tbody>
+              </table>
+
+	<!--<p><input type="button" name="btnAgendarConsulta" id="btnAgendarConsulta" value="Agendar Consulta" class="modalbox botao" /></p> -->
+     <p>&nbsp;</p>
+          	
+    <!-- <a class="modalbox botao" href="#inline" style="width:120px; align: center">Agendar Consulta</a>-->
+            
+  	</form>
+</div>
+
+<!-- hidden inline form -->
+<div id="inline">
+	<h2>Agendar Consulta</h2>
+
+	<form id="agendarConsulta" name="agendarConsulta" action="#" method="post">
+		<label for="nomePaciente" class="label_form_hide">Nome do Paciente:</label>
+		<input type="text" id="nomePaciente" name="nomePaciente" class="txt">
+		<br>
+		<label for="planoSaude" class="label_form_hide">Plano de Saúde:</label>
+		<input type="text" id="planoSaude" name="planoSaude" class="txt">
+		<br>
+        <label for="data" class="label_form_hide">Data:</label>
+		<input type="text" name="dataConsulta" id="dataConsulta"  class="txt">
+        <br>
+        <label for="horario" class="label_form_hide">Horário:</label>
+		<input type="text" id="horaConsulta" name="horaConsulta" class="txt">
+        <br>
+	  <div align="right"><button id="btnSalvar" style="align-content:center;" class="botao">Salvar</button></div>
+	</form>
+</div>
+
+<!-- hidden inline form -->
+<div id="about" style="display:none">
+	<h2>About</h2>
+
+	<form id="aboutTrab" name="aboutTrab" action="#" method="post">
+		<p>
+        <label for="nomeAutora">Autora: Bianca de Menezes Braz</label>
+		
+		<p>
+		<label for="linkGit">Link GitHub:</label>
+		
+		<p>
+        <label for="linkOpen">Link OpenShift:</label>
+		<p>
+        
+        <label for="linkOpen">Sobre o sistema: Os botões que possibilitam ações só irão ser <br/> exibidos para consultas realizadas da data atual em diante.</label>
+		<p>
+	  <div align="right"><button id="btnOk" class="botao">Ok</button></div>
+	</form>
+</div>
+    <div id="rodape">
+    	<p>Bianca Braz<sup>©</sup></p>
+  	</div>
+	</div>
+</body>
+</html>
