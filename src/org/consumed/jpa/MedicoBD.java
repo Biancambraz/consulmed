@@ -27,7 +27,7 @@ public class MedicoBD extends JPABase implements IMedicoDao{
 			
 			manager.getTransaction().rollback();
 			
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		finally
 		{
@@ -48,7 +48,7 @@ public class MedicoBD extends JPABase implements IMedicoDao{
 		} catch (Exception e) {
 			manager.getTransaction().rollback();
 			
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		finally
 		{
@@ -65,14 +65,12 @@ public class MedicoBD extends JPABase implements IMedicoDao{
 			return manager.find(Medico.class, object.getId());
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		finally
 		{
 			manager.close();
 		}
-		
-		return null;
 	}
 	
 	@Override
@@ -88,7 +86,7 @@ public class MedicoBD extends JPABase implements IMedicoDao{
 		} catch (Exception e) {
 			manager.getTransaction().rollback();
 			
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		finally
 		{
@@ -105,13 +103,11 @@ public class MedicoBD extends JPABase implements IMedicoDao{
 			return manager.createQuery("SELECT m FROM Medico m ORDER BY m.nome").getResultList(); 
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		finally
 		{
 			manager.close();
 		}
-		
-		return null;
 	}
 }

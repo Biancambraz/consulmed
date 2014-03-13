@@ -28,7 +28,7 @@ public class ConsultaBD extends JPABase implements IConsultaDao{
 			
 			manager.getTransaction().rollback();
 			
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		finally
 		{
@@ -45,14 +45,12 @@ public class ConsultaBD extends JPABase implements IConsultaDao{
 			return manager.find(Consulta.class, object.getId());
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		finally
 		{
 			manager.close();
 		}
-		
-		return null;
 	}
 	
 	@Override
@@ -68,7 +66,7 @@ public class ConsultaBD extends JPABase implements IConsultaDao{
 		} catch (Exception e) {
 			manager.getTransaction().rollback();
 			
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		finally
 		{
@@ -89,7 +87,7 @@ public class ConsultaBD extends JPABase implements IConsultaDao{
 		} catch (Exception e) {
 			manager.getTransaction().rollback();
 			
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		finally
 		{
@@ -120,13 +118,11 @@ public class ConsultaBD extends JPABase implements IConsultaDao{
 					.getResultList(); 
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		finally
 		{
 			manager.close();
 		}
-		
-		return null;
 	}
 }

@@ -184,22 +184,29 @@ a.botao
 			 background: #D9E7F2;} /*Cor de fundo do container A4C3DC*/		
 			 
 			 
-#tabelaConsultas, thead tr, thead td
+#tabelaConsultas thead tr, thead td
 {
 	width:510px;
 	border: 1px solid black;
 	border-collapse:collapse;
 	text-align: center;
+	font-weight:bold;
+	font-size: 1.2em;
 }
 
 #tabelaConsultas .cabecalho_superior
 {
 	text-align: left;
-	color:black;
+	color:black ; 
+	font-weight:bold;
+	padding-left:10px;
 }
 
-#tabelaConsultas, tbody tr, tbody td
+#tabelaConsultas tbody tr, tbody td
 {
+	width:510px;
+	border: 1px solid black;
+	border-collapse:collapse;
 	text-align: center;
 	color:black;
 	font-size:16px;

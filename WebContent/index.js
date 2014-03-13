@@ -177,12 +177,12 @@ function btnConsultarAgendaClick()
 					
 					if(res[index].status && res[index].status.id == "2")
 					{
-						$(colOpcao).append("<a class='botao' href='#inline' style='width:80px; align: center' onclick='javascript:cancelarConsulta(" + res[index].id + ");'> Cancelar </a>");
-						$(colOpcao).append("<a class='botao' href='#inline' style='width:80px; align: center' onclick='javascript:realizarConsulta(" + res[index].id + ");'> Realizada </a>");
+						$(colOpcao).append("<a class='' href='#inline' style='width:80px; align: center' onclick='javascript:cancelarConsulta(" + res[index].id + ");'> <img src='cancel.png' /> </a>");
+						$(colOpcao).append("<a class='' href='#inline' style='width:80px; align: center' onclick='javascript:realizarConsulta(" + res[index].id + ");'> <img src='check.png' />  </a>");
 					}
 					else if(!res[index].status || res[index].status.id != "3")
 					{
-						$(colOpcao).append("<a href='#inline' class='modalbox botao' style='width:120px; align: center' onclick='javascript:marcarClick(" + hora + ");'> Marcar </a>");
+						$(colOpcao).append("<a href='#inline' class='modalbox' style='width:120px; align: center' onclick='javascript:marcarClick(" + hora + ");'> <img src='add.png' />  </a>");
 						
 					}
 					
